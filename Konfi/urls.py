@@ -16,6 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from conf_room import views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('menu/', views.MenuView),
+    path('room/new/', views.AddRoom.as_view()),
+
+
 ]

@@ -1,0 +1,1 @@
+You should have Django and open this project by "runserver" on Django console

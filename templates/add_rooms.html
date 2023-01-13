@@ -3,24 +3,9 @@
     <input type="text" name="name" placeholder="Room name">
     <input type="number" name="seats" placeholder="How many seats?">
     <a> Is projector in room? </a>
-    <input type="checkbox" name="projector" value="projector">
+    <input type="checkbox" name="projector" id="projector">
     <input type="submit">
 </form>
-
-<table width="30%">
-    <tr>
-        <th>Room name:</th>
-        <th>Seats:</th>
-        <th>Projector:</th>
-    </tr>
-    {% for Room in rooms %}
-        <tr>
-            <td>{{ Room.name }}</td>
-            <td>{{ Room.seats }}</td>
-            <td>{{ Room.projector }}</td>
-        </tr>
-    {% endfor %}
-</table>
 <br>
 <br>
 <a href="/menu">BACK TO MENU</a>

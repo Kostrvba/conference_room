@@ -20,8 +20,10 @@ from conf_room import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('menu/', views.MenuView),
+    path('menu/', views.MenuView.as_view()),
     path('room/new/', views.AddRoom.as_view()),
+    path('room/view/', views.RoomsView.as_view()),
+
 
 
 ]

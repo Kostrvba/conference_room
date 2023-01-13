@@ -1,10 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+<table width="30%">
+    <tr>
+        <th>Room name:</th>
+        <th>Seats:</th>
+        <th>Projector:</th>
+    </tr>
+    {% for Room in rooms %}
+        <tr>
+            <td>{{ Room.name }}</td>
+            <td>{{ Room.seats }}</td>
+            <td>{{ Room.projector }}</td>
+        </tr>
+    {% endfor %}
+</table>
+<br>
+<br>
+<a href="/menu">BACK TO MENU</a>

@@ -6,7 +6,7 @@
     </tr>
     {% for Room in rooms %}
         <tr>
-            <td>{{ Room.name }}</td>
+            <td><a href="/room/{{ Room.id }}/">{{ Room.name }}</a></td>
             <td>{{ Room.seats }}</td>
             <td>{{ Room.projector }}</td>
         </tr>

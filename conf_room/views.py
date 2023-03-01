@@ -33,4 +33,12 @@ class AddRoom(View):
 class RoomsView(View):
     def get(self, request):
         rooms = Room.objects.all()
+        if not rooms:
+            return render(request, 'all_rooms.html', context={"error": "No rooms"})
         return render(request, 'all_rooms.html', {'rooms': rooms})
+
+
+class RoomInfo(View):
+    def get(self, request, room_id):
+        room = Room.objects.get(id=room_id)
+        return render(request, 'room_info.html', context={"room": room})

@@ -23,6 +23,7 @@ urlpatterns = [
     path('menu/', views.MenuView.as_view()),
     path('room/new/', views.AddRoom.as_view()),
     path('room/view/', views.RoomsView.as_view()),
+    path('room/<int:room_id>/', views.RoomInfo.as_view(), name="room"),
 
 
 
